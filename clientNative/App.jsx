@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import Square from "./components/Square.jsx"
-import Board  from "./components/Board.jsx"
-import {Button, Text, InputText, View, FlatList, StyleSheet, AppRegistry} from "react-native";
-
+import Square from "./components/Square.jsx";
+import Board  from "./components/Board.jsx";
+import Login from "./components/Login.jsx";
+import Signup from "./components/Signup.jsx";
+import {Button, Text, TextInput, View, FlatList, StyleSheet, AppRegistry} from "react-native";
+import axios from "axios";
 
 //style
 
@@ -124,6 +126,10 @@ data={[
 {key: "keys"}
 ]} />
 </View>
+
+<Login/>
+<Text>Don't have an account? Sign up now!</Text>
+<Signup/>
 </View>
 );
 }
@@ -149,3 +155,9 @@ return squares[a];
 return null;
 }
 
+function submitSignup() {
+axios.post("/")
+.then(res => res)
+.catch(err => { console.error(err);
+return err; } )
+}
