@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Square } from "./components/Square.jsx"
-import { Board } from "./components/Board.jsx"
+import Square from "./components/Square.jsx"
+import Board  from "./components/Board.jsx"
 import {Button, Text, InputText, View, FlatList, StyleSheet, AppRegistry} from "react-native";
 
 
