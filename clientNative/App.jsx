@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Square from "./components/Square.jsx"
+import Board from "./components/Board"
+import Login from "./components/Login"
+import Signup from "./components/Signup"
 import {Button, Text, InputText, View, FlatList, StyleSheet, AppRegistry} from "react-native";
 
 
@@ -122,6 +124,9 @@ data={[
 {key: "keys"}
 ]} />
 </View>
+<Signup />
+<Text>Or if you have an account:</Text>
+<Login />
 </View>
 );
 }
