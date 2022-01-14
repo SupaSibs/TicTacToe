@@ -1,6 +1,7 @@
 import React, { Component} from "react";
 import {View} from "react-native"
-import {Square} from "./Square.jsx"
+import Square from "./Square.jsx"
+import styles from "./../App.jsx"
 //Board export class component
 export default class Board extends React.Component {
   renderSquare(i) {
@@ -15,17 +16,17 @@ export default class Board extends React.Component {
   render() {
   return (
   <View>
-  <View style={styles.board-row}>
+  <View style={styles.boardRow}>
   {this.renderSquare(0)}
   {this.renderSquare(1)}
   {this.renderSquare(2)}
   </View>
-  <View style={styles.board-row}>
+  <View style={styles.boardRow}>
   {this.renderSquare(3)}
   {this.renderSquare(4)}
   {this.renderSquare(5)}
   </View>
-  <View style={styles.board-row}>
+  <View style={styles.boardRow}>
   {this.renderSquare(6)}
   {this.renderSquare(7)}
   {this.renderSquare(8)}

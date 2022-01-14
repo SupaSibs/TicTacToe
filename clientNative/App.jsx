@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-import Square from "./components/Square.jsx";
-import Board  from "./components/Board.jsx";
-import Login from "./components/Login.jsx";
-import Signup from "./components/Signup.jsx";
-import {Button, Text, TextInput, View, FlatList, StyleSheet, AppRegistry} from "react-native";
-import axios from "axios";
+import Square from "./components/Square.jsx"
+import {Button, Text, InputText, View, FlatList, StyleSheet, AppRegistry} from "react-native";
 
-//style
 
-const styles = StyleSheet.create({
+//styles
+
+let styles = StyleSheet.create({
   container: {
   fontSize: 14,
   fontFamily: "sans-serif",
@@ -46,9 +43,8 @@ const styles = StyleSheet.create({
   gameInfo: {
   marginLeft: 20,
   }
-  });
-
-
+  })
+const Board = require("./compnents/Board.jsx")
 
 	
 AppRegistry.registerComponent('main', () => App)
@@ -126,10 +122,6 @@ data={[
 {key: "keys"}
 ]} />
 </View>
-
-<Login/>
-<Text>Don't have an account? Sign up now!</Text>
-<Signup/>
 </View>
 );
 }
@@ -155,9 +147,3 @@ return squares[a];
 return null;
 }
 
-function submitSignup() {
-axios.post("/")
-.then(res => res)
-.catch(err => { console.error(err);
-return err; } )
-}

@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import {Button, Text, TextInput, View, FlatList, StyleSheet, AppRegistry, TextInput} from "react-native";
+import {Button, Text, TextInput, View, FlatList, StyleSheet, AppRegistry} from "react-native";
 
 export default function Login() {
 return (
