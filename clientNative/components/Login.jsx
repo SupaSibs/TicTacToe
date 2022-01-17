@@ -1,6 +1,6 @@
 import React, {Component} from "react"
-import {Button, Text, TextInput, View, FlatList, StyleSheet, AppRegistry} from "react-native";
-
+import {Button, Text, TextInput, View, FlatList, StyleSheet, AppRegistry} from "react-native"
+import styles from "./../styles";
 export default function Login() {
 return (
 <View style={styles.inputForm}>

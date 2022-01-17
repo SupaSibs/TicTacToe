@@ -1,52 +1,11 @@
-import React, { Component } from "react";
-import Board from "./components/Board"
+import React, { Component } from "react"
+import styles from "./styles"
 import Login from "./components/Login"
+import Board from "./components/Board"
 import Signup from "./components/Signup"
 import {Button, Text, InputText, View, FlatList, StyleSheet, AppRegistry} from "react-native";
 
 
-//styles
-
-let styles = StyleSheet.create({
-  container: {
-  fontSize: 14,
-  fontFamily: "sans-serif",
-  margin: 20
-  },
-
-  FlatList: {
-  paddingLeft: 30,
-  },
-
-  status: {
-  marginBottom: 10,
-  },
-
-  square: {
-  backgroundColor: "white",
-  borderStyle: "solid",
-  borderColor: "#999",
-  borderWidth: 1,
-  fontSize: 24,
-  fontWeight: "bold",
-  lineHeight: 34,
-  marginRight: -1,
-  marginTop: -1,
-  padding: 0,
-  textAlign: "center",
-  width: 34,
-  },
-
-  game: {
-  display: "flex",
-  flexDirection: "row",
-  },
-
-  gameInfo: {
-  marginLeft: 20,
-  }
-  })
-const Board = require("./compnents/Board.jsx")
 
 	
 AppRegistry.registerComponent('main', () => App)

@@ -1,5 +1,6 @@
 import React, {Component} from "react"
-import {Button, Text, TextInput, View, FlatList, StyleSheet, AppRegistry, TextInput} from "react-native";
+import {Button, Text, TextInput, View, FlatList, StyleSheet, AppRegistry, TextInput} from "react-native"
+import styles from "./../styles"
 
 export default function Signup() {
 return (

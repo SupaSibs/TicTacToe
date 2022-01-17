@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import {View} from "react-native"
-import Square from "./Square.jsx"
-import styles from "./../App.jsx"
+import Square from "./Square"
+import styles from "./../styles"
 //Board export class component
 export default class Board extends React.Component {
   renderSquare(i) {
