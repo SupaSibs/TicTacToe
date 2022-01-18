@@ -1,11 +1,7 @@
 import React, { Component } from "react"
 import styles from "./styles"
-import Login from "./components/Login"
 import Board from "./components/Board"
-import Signup from "./components/Signup"
 import {Button, Text, InputText, View, FlatList, StyleSheet, AppRegistry} from "react-native";
-
-
 
 	
 AppRegistry.registerComponent('main', () => App)
@@ -18,7 +14,7 @@ super(props);
 this.state = {
 history: [
 {
-squares: Array(9).fill(null)
+squares: Array(9).fill("")
 }
 ],
 stepNumber: 0,
@@ -31,7 +27,7 @@ handleClick(i) {
 const history = this.state.history.slice(0, this.state.stepNumber + 1);
 const current = history[history.length - 1];
 const squares = current.squares.slice();
-if (Board.calculateWinner(squares) || squares[i]) {
+if (calculateWinner(squares) || squares[i]) {
 return;
 }
 squares[i] = this.state.xIsNext ? "X" : "O";
@@ -74,7 +70,7 @@ status = winner ? "Winner: " + winner : "Next player: " + (this.state.xIsNext ? 
 return (
 <View style={styles.game}>
 <View >
-<Board squares={current.squares}  onPress={(i) => this.handleClick(i)} />
+<Board squares={current.squares}  onClick={(i) => this.handleClick(i)} />
 </View>
 <View style={styles.gameInfo}>
 <Text>{status}</Text>
@@ -83,9 +79,6 @@ data={[
 {key: "keys"}
 ]} />
 </View>
-<Signup />
-<Text>Or if you have an account:</Text>
-<Login />
 </View>
 );
 }

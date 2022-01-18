@@ -4,6 +4,9 @@ import Square from "./Square"
 import styles from "./../styles"
 //Board export class component
 export default class Board extends React.Component {
+	constructor(props) {
+super(props)
+	}
   renderSquare(i) {
   return (
   <Square
